@@ -2,7 +2,7 @@
 
 This project is from [Dev Ed](https://www.youtube.com/watch?v=U9T6YkEDkMo).
 <br/>
-The Breaking Bad [API](https://breakingbadapi.com/)
+Recipe [API](https://www.edamam.com/)
 
 ## Available Deploy on Netlify
 
