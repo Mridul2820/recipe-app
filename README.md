@@ -1,4 +1,4 @@
-# Breaking Bad Cast React App
+# Recipe React App
 
 This project is from [Dev Ed](https://www.youtube.com/watch?v=U9T6YkEDkMo).
 <br/>
