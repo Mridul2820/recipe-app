@@ -1,0 +1,28 @@
+.search-form {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 50%;
+    border: none;
+    padding: 10px;
+}
+
+.search-button {
+    background: blueviolet;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.type-something {
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+// Responsive Breakpoint
+$bp-large: 62em;        //992px
+$bp-medium: 45em;       //720px
+$bp-small: 40em;        //640px
+$bp-smallest: 25em;     //400px
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px;
+
+    @media only screen and (max-width: $bp-large){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-small){
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-smallest){
+        margin: 12px;
+        gap: 15px;
+    }
+}

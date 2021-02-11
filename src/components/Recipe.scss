@@ -1,0 +1,21 @@
+
+.recipe-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+        width: 38%;
+        border-radius: 50%;
+    }
+
+    .details {
+        width: 60%;
+        padding: 10px;
+
+        .recipe-name {
+            font-size: 25px;
+        }
+    }
+}

@@ -4,8 +4,6 @@ import RecipeList from "./components/RecipeList";
 
 import './App.scss';
 
-import Recipe from "./components/Recipe";
-
 const App = () => {
     const APP_ID = '933a95c8';
     const API_KEY = 'b300433be262962cecc111dc09bdb41e';
@@ -30,7 +28,11 @@ const App = () => {
             <SearchFrom 
                 getQuerry={(q) => setQuerry(q)} 
             />
-            <RecipeList recipes={recipes} />
+            {querry ? 
+                <RecipeList recipes={recipes}/> 
+                : 
+                <h1 className="type-something" >Type Something in Searchbar</h1>
+            }
         </div>
     )
 }

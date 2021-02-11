@@ -1,4 +1,5 @@
 import { useState  } from 'react'
+import './SearchFrom.scss'
 
 const SearchFrom = ({ getQuerry }) => {
 

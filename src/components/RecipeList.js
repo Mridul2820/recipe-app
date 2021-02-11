@@ -1,14 +1,12 @@
 import uuid from 'react-uuid';
 import Recipe from "./Recipe";
+import './RecipeList.scss'
 
 const RecipeList = ({ recipes }) => {
     return (
-        <div className="recipes">
-
+        <div className="recipe-list">
             {recipes.map(recipe => (
-
                 <Recipe key={uuid()} recipe={recipe} />
-                
             ))}
         </div>
     )
