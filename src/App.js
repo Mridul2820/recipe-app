@@ -1,5 +1,8 @@
 import { useState ,useEffect } from 'react'
-import './App.css';
+import SearchFrom from "./components/SearchFrom";
+import RecipeList from "./components/RecipeList";
+
+import './App.scss';
 
 import Recipe from "./components/Recipe";
 
@@ -8,7 +11,6 @@ const App = () => {
     const API_KEY = 'b300433be262962cecc111dc09bdb41e';
 
     const [recipes, setRecipes] = useState([])
-    const [search, setSearch] = useState('')
     const [querry, setQuerry] = useState('chicken')
 
     useEffect(() => {
@@ -23,42 +25,12 @@ const App = () => {
         console.log(data.hits);
     }
 
-
-    const updateSearch = e => {
-        setSearch(e.target.value)
-    }
-
-    const getSearch = e => {
-        e.preventDefault();
-        setQuerry(search)
-        setSearch('')
-    }
-
     return (
         <div className="App">
-            <form onSubmit={getSearch} className="search-form">
-                <input 
-                    type="text" 
-                    className="search-bar" 
-                    value={search} 
-                    onChange={updateSearch}
-                />
-                <button type="submit"className="search-button">
-                    Search
-                </button>
-            </form>
-            <div className="recipes">
-                {recipes.map(recipe => (
-                    <Recipe 
-                        key={recipe.recipe.label} 
-                        title={recipe.recipe.label} 
-                        img={recipe.recipe.image} 
-                        cal={recipe.recipe.calories}
-                        ings={recipe.recipe.ingredients}
-                    />
-                ))}
-            </div>
-
+            <SearchFrom 
+                getQuerry={(q) => setQuerry(q)} 
+            />
+            <RecipeList recipes={recipes} />
         </div>
     )
 }

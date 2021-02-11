@@ -1,16 +1,15 @@
-import style from '../modules/recipe.module.css'
+import RecipeIngredients from "./RecipeIngredients";
+import style from '../modules/recipe.module.scss'
 
-const Recipe = ({ title, img, cal, ings }) => {
+const Recipe = ({ recipe }) => {
     return (
         <div className={style.recipe}>
-            <h1  >{title}</h1>
-            <ol>
-                {ings.map(ing => (
-                    <li>{ing.text}</li>
-                ))}
-            </ol>
-            <p>{cal}</p>
-            <img src={img} alt="img"/>
+            <h1>{recipe.recipe.label}</h1>
+
+            <RecipeIngredients ings={recipe.recipe.ingredients} />
+            
+            <p>{recipe.recipe.calories}</p>
+            <img src={recipe.recipe.image} alt="img"/>
         </div>
     )
 }
