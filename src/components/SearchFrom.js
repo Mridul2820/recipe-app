@@ -1,5 +1,4 @@
 import { useState  } from 'react'
-import './SearchFrom.scss'
 
 const SearchFrom = ({ getQuerry }) => {
 
@@ -8,7 +7,6 @@ const SearchFrom = ({ getQuerry }) => {
     const getSearch = e => {
         e.preventDefault();
         getQuerry(search)
-        setSearch('')
     }
 
     const updateSearch = e => {

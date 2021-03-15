@@ -1,6 +1,5 @@
 import uuid from 'react-uuid';
 import Recipe from "./Recipe";
-import './RecipeList.scss'
 
 const RecipeList = ({ recipes }) => {
     return (

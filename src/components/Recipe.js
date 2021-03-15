@@ -1,10 +1,8 @@
 import RecipeIngredients from "./RecipeIngredients";
-import './Recipe.scss'
-import style from '../modules/recipe.module.scss';
 
 const Recipe = ({ recipe }) => {
     return (
-        <div className={style.recipe}>
+        <div className="recipe">
             <div className="recipe-top">
                 <img src={recipe.recipe.image} alt="img"/>
 

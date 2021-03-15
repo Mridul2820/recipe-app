@@ -2,7 +2,7 @@ import { useState ,useEffect } from 'react'
 import SearchFrom from "./components/SearchFrom";
 import RecipeList from "./components/RecipeList";
 
-import './App.scss';
+import './styles/app.scss';
 
 const App = () => {
     const APP_ID = '933a95c8';
